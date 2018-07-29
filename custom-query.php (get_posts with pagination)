@@ -1,0 +1,40 @@
+<?php
+    /**
+     * Template Name: Custom Query
+     */
+
+    get_header();
+    $paged         = get_query_var('paged') ? get_query_var('paged') : 1;
+    $post_ids      = array(1, 19, 18 , 21 , 23);
+    $post_per_page = 2;
+    $custom_post   = null;
+    $custom_post   = get_posts(array(
+      'post__in' => $post_ids ,
+      'posts_per_page' => $post_per_page ,
+      'order' => 'ASC',
+      'orderby' => 'post__in',
+      'paged' => $paged
+    ));
+  ?>
+    <div class="custom-wrapper">
+      <?php
+        foreach ($custom_post as $post) {
+          setup_postdata($post);
+          ?>
+          <div class="custom-post-container text-center">
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+          </div>
+          <?php
+        }
+        wp_reset_postdata();
+      ?>
+      <div class="custom-post-pagination text-center">
+        <?php
+          echo paginate_links(array(
+            'total' => ceil(count($post_ids)/$post_per_page)
+          ));
+        ?>
+      </div>
+    </div>
+  <?php
+get_footer();
