@@ -1,2 +1,2 @@
-# Wordpress
-WordPress Running project's Practise
+# WordPress Theme Development 
+## Necessary codes
