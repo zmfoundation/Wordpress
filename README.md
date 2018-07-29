@@ -1,5 +1,3 @@
 # WordPress Theme Development 
-## Necessary codes
-
-# First Date Archive
+### First Date Archive
 <a href="https://github.com/zmfoundation/Wordpress/blob/master/custom-query.php%20(get_posts%20with%20pagination)">Date Archieve</a>
