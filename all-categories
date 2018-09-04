@@ -1,0 +1,37 @@
+// To find out the all categories from a loop 
+
+$categories = get_the_category();
+
+// variable $categories will store all categoreis as an array like below: 
+Array
+(
+    [0] => WP_Term Object
+        (
+            [term_id] => 1
+            [name] => Uncategorized
+            [slug] => uncategorized
+            [term_group] => 0
+            [term_taxonomy_id] => 1
+            [taxonomy] => category
+            [description] => 
+            [parent] => 0
+            [count] => 1
+            [filter] => raw
+            [cat_ID] => 1
+            [category_count] => 1
+            [category_description] => 
+            [cat_name] => Uncategorized
+            [category_nicename] => uncategorized
+            [category_parent] => 0
+        )
+
+)
+
+***** Now challege is to find out the name of the category -
+to do this just pass an array like below: 
+
+$cat = array();
+
+$cat[] = array(
+  'cat' => $categories[0]->name,    // it will return category name : Uncategorized. 
+);
