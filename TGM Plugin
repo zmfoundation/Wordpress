@@ -1,0 +1,35 @@
+// how to include a recommanded plugin using tgm
+
+// TGM config 
+require_once get_theme_file_path('/lib/class-tgm-plugin-activation.php'); // tgm activation is at lib directory
+
+// Codes for wordpress repository plugin
+    array(
+        'name'      => 'Advanced Custom Fields', // Plugin name
+        'slug'      => 'advanced-custom-fields', // Plugin slug 
+        'required'  => false,
+	)
+    
+// codes for from existing theme directory (Plugin Repository)
+    array(
+        'name'               => 'TGM Example Plugin', // The plugin name.
+        'slug'               => 'tgm-example-plugin', // The plugin slug (typically the folder name).
+        'source'             => get_template_directory() . '/lib/plugins/tgm-example-plugin.zip', // The plugin source.
+        'required'           => true, 
+        'version'            => '', 
+        'force_activation'   => false, 
+        'force_deactivation' => false, 
+        'external_url'       => '', 
+        'is_callable'        => '', 
+    ),
+    
+// codes for from an external source 
+
+// This is an example of how to include a plugin from an arbitrary external source in your theme.
+array(
+    'name'         => 'TGM New Media Plugin', // The plugin name.
+    'slug'         => 'tgm-new-media-plugin', // The plugin slug (typically the folder name).
+    'source'       => 'https://s3.amazonaws.com/tgm/tgm-new-media-plugin.zip', // The plugin source.
+    'required'     => true, // If false, the plugin is only 'recommended' instead of required.
+    'external_url' => 'https://github.com/thomasgriffin/New-Media-Image-Uploader', // If set, overrides default API URL and points to an external URL.
+),
