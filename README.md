@@ -6,5 +6,5 @@ WordPress Theme Development from scratch. It is a running premium course with Ha
 <br>
 <a href="https://github.com/zmfoundation/Wordpress/blob/master/wordpress%20comment%20form">Comment Form</a>
 <br>
-<a> href="https://github.com/zmfoundation/Wordpress/blob/master/TGM%20Plugin">TGM Plugin Activationn</a>
+<a href="https://github.com/zmfoundation/Wordpress/blob/master/TGM%20Plugin">TGM Plugin Activationn</a>
 
