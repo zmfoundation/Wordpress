@@ -11,4 +11,6 @@ WordPress Theme Development from scratch. It is a running premium course with Ha
 <a href="https://github.com/zmfoundation/Wordpress/blob/master/featured-post">Featured Post (Philosophy Theme)</a>
 <br>
 <a href="https://github.com/zmfoundation/Wordpress/blob/master/all-categories">Featured Post Category (all categories store) (Philosophy Theme)</a>
+<br>
+<a href="https://github.com/zmfoundation/Wordpress/blob/master/Philosophy%20Menu">Menu fixing (Philosophy Theme)</a> <br>
 
