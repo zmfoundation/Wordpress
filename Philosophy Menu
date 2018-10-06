@@ -1,0 +1,12 @@
+#Customization of main menu with PHP 
+
+<?php
+      $header_menu =wp_nav_menu( array(
+          'theme_location' => 'header_menu',
+          'menu_class'     => 'header__nav',
+          'echo'           => false,
+      ) );
+
+      $header_menu = str_replace('menu-item-has-children','menu-item-has-children has-children',$header_menu);
+      echo $header_menu;
+?>
