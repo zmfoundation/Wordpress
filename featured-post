@@ -13,10 +13,13 @@ Step 01: Query the specific posts basis on meta value
   // now query the necessary field from the post 
   $post_data = array();                               // here all posts will be stored from above query 
   while($philosophy_featured_post->have_posts()){
+    $philoshopy_featured_post->the_post();
     $post_data[] = array(
       'title'=> get_the_title(),
       'author'=> get_author_meta('display_name'),
       'thumbnail'=> get_the_post_thumbnail_url(get_the_ID(),'large'),
+      'avatar'=> get_avatar(get_author_meta('ID')),
+      'date'=> get_the_date(),
     );
   }
   
@@ -30,7 +33,14 @@ Step 01: Query the specific posts basis on meta value
   
   Some Examples with PHP Codes 
   
-  Displaying image: <img src= "<?php echo esc_url($post_data[0]['thumbnail']); ?>" >
+  Displaying results: 
+  <?php echo esc_html($post_data[0]['title']);?> // here [0] indicates the first post
+  
+  <?php echo esc_html($post_data[0]['author']);?>
+  
+   <?php echo esc_html($post_data[0]['thumbnail']);?>
+   
+   // similarly rest of all.
 
 ====================================
 
