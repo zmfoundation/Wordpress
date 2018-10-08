@@ -1,0 +1,7 @@
+## কিভাবে অ্যাডমিন প্যানেল তথা যেখানে পোস্ট লুপ রান করে না সেখানে কোন পোস্ট এর আইডি বের করার উপায়ঃ 
+<?php 
+
+
+if ( isset( $_REQUEST['post'] ) || isset( $_REQUEST['post_ID'] ) ) {
+        $post_id = empty( $_REQUEST['post_ID'] ) ? $_REQUEST['post'] : $_REQUEST['post_ID'];
+    }
