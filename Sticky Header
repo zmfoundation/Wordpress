@@ -1,0 +1,35 @@
+======================= jQuery codes ===================================== 
+
+;(function ($) {
+    jQuery(document).ready(function(){
+        jQuery(window).on('scroll',function(){
+            if (jQuery(this).scrollTop() > 50) {
+                jQuery('header#masthead').addClass('stick');
+            } else {
+                jQuery('header#masthead').removeClass('stick');
+            }
+        });
+    });
+})(jQuery);
+
+========================= CSS codes ========================================
+<style>
+        .stick{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #fbfbfb !important;
+            box-shadow: 0 0 5px #999;
+            z-index: 999;
+            animation: smoothScroll 1.5s forwards;
+        }
+        @keyframes smoothScroll {
+            0% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
