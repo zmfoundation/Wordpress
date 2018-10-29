@@ -1,0 +1,98 @@
+<?php
+/*
+ * Inline CSS style
+ * */
+    $header_top_bg_color = get_theme_mod('ekaboom_header_top_background');
+    $header_top_padding = get_theme_mod('ekaboom_header_top_padding');
+
+    // left portion
+    $header_top_left_portion_icon_size = get_theme_mod('ekaboom_header_top_left_portion_icon_size');
+    $header_top_left_portion_icon_color = get_theme_mod('ekaboom_header_top_left_portion_icon_color');
+
+    // right portion
+    $header_top_right_icon_color = get_theme_mod('ekaboom_social_icons_color');
+    $header_top_right_icon_hover_color = get_theme_mod('ekaboom_social_icons_hover_color');
+    $header_top_right_icon_size = get_theme_mod('ekaboom_social_icons_size');
+
+    // menu
+    $header_menu_color = get_theme_mod('ekaboom_display_menu_color');
+    $header_menu_font_hover_color = get_theme_mod('ekaboom_display_menu_hover_color');
+    $header_menu_font_size = get_theme_mod('ekaboom_display_menu_font_size');
+
+    // footer
+    $footer_background = get_theme_mod('ekaboom_footer_background');
+
+    // Blog meta info
+    $blog_meta_font_size = get_theme_mod('ekaboom_meta_font_size');
+    $blog_meta_font_color = get_theme_mod('ekaboom_meta_font_color');
+    $blog_meta_spacing = get_theme_mod('ekaboom_meta_spacing');
+
+    // primary sidebar icon
+    $primary_sidebar_icon_color = get_theme_mod('ekaboom_primary_sidebar_icon_color');
+    $primary_sidebar_item_size = get_theme_mod('ekaboom_primary_sidebar_item_size');
+    $primary_sidebar_item_padding = get_theme_mod('ekaboom_primary_sidebar_item_padding');
+
+    $primary_sidebar_icon_size = get_theme_mod('ekaboom_primary_sidebar_icon_size');
+    $primary_sidebar_item_color = get_theme_mod('ekaboom_primary_sidebar_item_color');
+
+    $primary_sidebar_heading_background = get_theme_mod('ekaboom_primary_sidebar_heading_background');
+
+
+$customizer_style = <<<EOD
+    
+    .site-top-header{
+        background: {$header_top_bg_color} !important;
+        padding: {$header_top_padding}px 0 !important;
+    }
+    .top-header-wrapper i{
+        font-size: {$header_top_left_portion_icon_size}px !important;
+        color: {$header_top_left_portion_icon_color} !important;
+    }
+    .top-header-right-icons a i{
+        color: {$header_top_right_icon_color} !important;
+        font-size: {$header_top_right_icon_size}px !important;
+    }
+    .top-header-right-icons a i:hover{
+        color: {$header_top_right_icon_hover_color} !important;
+    }
+    .primary_menu li a{
+        font-size: {$header_menu_font_size}px !important;
+        color: {$header_menu_color} !important;
+    }
+    .primary_menu li a:hover{
+        color: {$header_menu_font_hover_color} !important;
+    }
+    .site_footer{
+        background: {$footer_background}!important;
+    }
+
+    .entry-meta span {
+        font-size: {$blog_meta_font_size}px !important;
+        padding: 0 {$blog_meta_spacing}px !important;
+    }
+    .entry-meta span a, .entry-meta span i, .entry-meta span{
+        color: {$blog_meta_font_color} !important;
+    }
+    
+    section.widget ul li:before{
+        color: {$primary_sidebar_icon_color} !important;
+    }
+    
+    section.widget ul li {
+        font-size: {$primary_sidebar_item_size}px !important;
+        padding-bottom: {$primary_sidebar_item_padding}px !important;
+    }
+    section.widget ul li a{
+        color: {$primary_sidebar_item_color} !important;
+    }
+    section.widget ul li:before{
+        font-size: {$primary_sidebar_icon_size}px !important;
+    }
+    section.widget h2{
+        background: {$primary_sidebar_heading_background} !important;
+    }
+EOD;
+
+wp_add_inline_style('ekaboom-style',$customizer_style);
+
+/* ========== end inline style ========== */
