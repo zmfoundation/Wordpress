@@ -14,3 +14,4 @@ WordPress Theme Development from scratch. It is a running premium course with Ha
 <br>
 <a href="https://github.com/zmfoundation/Wordpress/blob/master/Philosophy%20Menu">Menu fixing (Philosophy Theme)</a> <br>
 <a href="https://github.com/zmfoundation/Wordpress/blob/master/Sticky%20Header">Sticky Header</a> <br>
+<a href="https://github.com/zmfoundation/Wordpress/blob/master/range-style">Range Field Style </a> <br>
