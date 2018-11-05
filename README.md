@@ -16,3 +16,4 @@ WordPress Theme Development from scratch. It is a running premium course with Ha
 <a href="https://github.com/zmfoundation/Wordpress/blob/master/Sticky%20Header">Sticky Header</a> <br>
 <a href="https://github.com/zmfoundation/Wordpress/blob/master/range-style">Range Field Style </a> <br>
 <a href="https://github.com/zmfoundation/Wordpress/blob/master/inline_style_for_customizer">Customizer Inline Style</a> <br>
+<a href="https://github.com/zmfoundation/Wordpress/blob/master/Social_icon_widget">Social Icon Widget </a> <br>
