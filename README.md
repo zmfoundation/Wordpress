@@ -18,3 +18,4 @@ WordPress Theme Development from scratch. It is a running premium course with Ha
 <a href="https://github.com/zmfoundation/Wordpress/blob/master/inline_style_for_customizer">Customizer Inline Style</a> <br>
 <a href="https://github.com/zmfoundation/Wordpress/blob/master/Social_icon_widget">Social Icon Widget </a> <br>
 <a href="https://github.com/zmfoundation/Wordpress/blob/master/drop-down-menu">Drop Down Menu</a> <br>
+<a href="https://github.com/zmfoundation/Wordpress/blob/master/read-more">Read More</a> <br>
