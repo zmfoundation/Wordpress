@@ -1,0 +1,6 @@
+// Replaces the excerpt "Read More" text by a link
+function themequerist_new_excerpt_more($more) {
+    global $post;
+    return '<a class="moretag" href="'. get_permalink($post->ID) . '"> Continue Reading...</a>';
+}
+add_filter('excerpt_more', 'themequerist_new_excerpt_more');
