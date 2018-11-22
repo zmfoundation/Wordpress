@@ -1,0 +1,66 @@
+// Menu Position 
+add_action( 'customize_register', function( \WP_Customize_Manager $wp_customize )
+{
+    // Get the 'Menus' panel instance
+    $mypanel = $wp_customize->get_panel( 'nav_menus');
+
+    if( $mypanel instanceof \WP_Customize_Nav_Menus_Panel )
+    {
+        // Adjust to your needs:
+        $mypanel ->priority = 21;    
+        $mypanel ->title    = 'My Great Menus!';
+    }
+
+}, 12 );
+
+
+// Replacement & Customizer 
+$wp_customize->get_setting( 'blogname'          )->transport = 'postMessage';
+$wp_customize->get_setting( 'blogdescription'   )->transport = 'postMessage';
+$wp_customize->get_setting( 'header_textcolor'  )->transport = 'postMessage';
+$wp_customize->get_control( 'background_color'  )->section   = 'background_image';
+$wp_customize->get_section( 'background_image'  )->title     = 'Background Settings';
+$wp_customize->get_section( 'title_tagline'     )->title     = 'Site Title / Logo';
+$wp_customize->get_section( 'static_front_page' )->title     = 'Home Page Settings';
+$wp_customize->get_section( 'static_front_page' )->priority  = 29;
+
+/**
+ * Add a customize section.
+ *
+ * @since 3.4.0
+ *
+ * @param string $id A specific ID of the section.
+ * @param array $args Section arguments.
+ */
+public function add_section( $id, $args = array() ) {
+	if ( is_a( $id, 'WP_Customize_Section' ) )
+		$section = $id;
+	else
+		$section = new WP_Customize_Section( $this, $id, $args );
+
+	$this->sections[ $section->id ] = $section;
+}
+
+/**
+ * Retrieve a customize section.
+ *
+ * @since 3.4.0
+ *
+ * @param string $id A specific ID of the section.
+ * @return object The section object.
+ */
+public function get_section( $id ) {
+	if ( isset( $this->sections[ $id ] ) )
+		return $this->sections[ $id ];
+}
+
+/**
+ * Remove a customize section.
+ *
+ * @since 3.4.0
+ *
+ * @param string $id A specific ID of the section.
+ */
+public function remove_section( $id ) {
+	unset( $this->sections[ $id ] );
+}
