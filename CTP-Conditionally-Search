@@ -1,0 +1,21 @@
+<?php
+
+    /*
+     * Conditionally Search Custom post type
+     * */
+
+    $post_type = <<<PT
+    <input type="hidden" name="post_type" value = "post"/>        
+PT;
+
+    if (is_post_type_archive("book")){
+        $post_type = <<<PT
+<input type="hidden" name="post_type" value = "book"/>
+PT;
+    }
+
+?>
+
+// now simply echo the $post_type variable inside the form in searchform.php file 
+
+Done. 
