@@ -1,0 +1,44 @@
+<?php
+  /*
+  * Custom + existing taxonmony Display with applying fitler 
+  */  
+  
+      $ts_tax_title = apply_filters('ts_tax_title',__("<b>Post Tag:</b> "));
+      $ts_tax_list = apply_filters('ts_tax_list',get_tags());
+
+      echo $ts_tax_title;
+      if (is_array($ts_tax_list)){
+          foreach ($ts_tax_list as $tsl){
+              printf("<a href='%s'>%s</a> | ",get_tag_link($tsl->term_id),$tsl->name);
+          }
+      }
+
+/*
+ * Taxonomy Title
+ * */
+ 
+function ts_tax_title_function($title)
+{
+    if (is_post_type_archive("book")) {
+        $title = "<b>Book's Language:</b> ";
+    }
+    return $title;
+}
+add_filter('ts_tax_title', 'ts_tax_title_function');
+
+/*
+ * Custom Taxonomy Search
+ * */
+ 
+function ts_tax_list_function($list)
+{
+    if (is_post_type_archive('book')) {
+        $list = get_terms(array(
+            'taxonomy' => 'language',
+        ));
+    }
+    return $list;
+}
+
+add_filter('ts_tax_list', 'ts_tax_list_function');
+
