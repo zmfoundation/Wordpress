@@ -21,3 +21,4 @@ WordPress Theme Development from scratch. It is a running premium course with Ha
 <a href="https://github.com/zmfoundation/Wordpress/blob/master/read-more">Read More</a> <br>
 <a href="https://github.com/zmfoundation/Wordpress/blob/master/customzer">Customizer</a> <br>
 <a href="https://github.com/zmfoundation/Wordpress/blob/master/CTP-Conditionally-Search">CPT Conditionally Search</a> <br>
+<a href="https://github.com/zmfoundation/Wordpress/blob/master/custom-taxonomy">Custom Taxonomy</a> <br>
