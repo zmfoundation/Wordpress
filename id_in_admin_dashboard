@@ -1,0 +1,13 @@
+<?php 
+// this is an example of finding any id (post,page or post type) in admin dashboard 
+  
+  $id = 0;
+
+	if ( isset( $_REQUEST['post'] ) || isset( $_REQUEST['post_ID'] ) ) {
+		$id = empty( $_REQUEST['post_ID'] ) ? $_REQUEST['post'] : $_REQUEST['post_ID'];
+	}
+
+
+
+
+
